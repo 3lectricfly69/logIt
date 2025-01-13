@@ -1,2 +1,2 @@
 # logIt
-With this webpage, a user can login
+With this webpage built with React, a user can login
