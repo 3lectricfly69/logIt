@@ -1,0 +1,37 @@
+import React, { useState } from 'react';
+
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+    const handleLogin = () => {
+        // Simulate login logic
+        if (username === 'admin' && password === 'password') {
+            setError('');
+            alert('Login successful!');
+        } else {
+            setError('Invalid username or password');
+        }
+    };
+
+    return (
+        <div>
+            <h2>Login</h2>
+            <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleLogin}>Login</button>
+            {error && <p>{error}</p>}
+        </div>
+    );
+};
+
+export default Login;
